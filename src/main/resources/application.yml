@@ -1,0 +1,13 @@
+### ????????
+spring:
+  profiles:
+    active: dev
+  ### ??????????
+  datasource:
+    driver-class-name: org.sqlite.JDBC
+    url: jdbc:sqlite:E:\\DDD\\springboot.db
+    username:
+    password:
+  ### sqlite??????????
+  jpa-defer-datasource-initialization: true
+

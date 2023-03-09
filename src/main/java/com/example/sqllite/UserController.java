@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     @Autowired
-    private MuserRepository userRepository;
+    private UserRepository userRepository;
 
     @GetMapping("/getHello")
     public String getHello() {
@@ -20,19 +20,19 @@ public class UserController {
     }
 
 	@GetMapping("/getUsers")
-	public List<Muser> getUsers() {
+	public List<User> getUsers() {
 		return userRepository.findAll();
 	}
 
     @RequestMapping("/doSave")
-    public Muser getUser() {
-        Muser user = new Muser();
+    public User getUser() {
+        User user = new User();
         user.setUserName("gho");
         user.setUserSex(UserSexEnum.WOMAN);
         user.setId(3L);
         user.setPassWord("ydfsdf");
 
-        Muser usere = userRepository.save(user);
+        User usere = userRepository.save(user);
 
         return usere;
     }
